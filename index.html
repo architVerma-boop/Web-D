@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Link to Google Fonts for Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+            background-color: #9fc4e2; /* Soft pastel blue background */
+            color: #000; /* Black text */
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f4f4f4;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #000;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+        }
+
+        /* Section Styling */
+        section {
+            padding: 2rem;
+            margin: 1rem;
+            background-color: #ffffff; /* White background for sections */
+            border: 2px solid #000; /* Black border around each section */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative; /* Needed for positioning the images */
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Text shadow for section headings */
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* About Me Section */
+        .about-me ul {
+            text-align: left;
+            font-size: 1.2rem;
+            padding-left: 20px; /* Shift the list to the left */
+        }
+
+        .about-me li {
+            margin: 0.8rem 0;
+        }
+
+        .about-me strong {
+            font-weight: bold;
+            font-size: 1.5rem; /* Increase font size for emphasis */
+        }
+
+        /* Positioning circular images */
+        .about-me-left, .about-me-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 250px;
+            height: 250px;
+            border-radius: 50%; /* Make images circular */
+            object-fit: cover; /* Ensures the images cover the circular area */
+        }
+
+        .about-me-left {
+            left: 50px; /* Positioning image a little closer to the left */
+        }
+
+        .about-me-right {
+            right: 50px; /* Positioning image a little closer to the right */
+        }
+
+        /* Skills & Learning Skills */
+        .skills, .learning-skills, .frameworks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .skill, .framework {
+            width: 200px;
+            margin: 1rem;
+            background-color: #e0e0e0; /* Slight grey background */
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .skill:hover, .framework:hover {
+            transform: translateY(-10px); /* Hover effect to raise the card */
+        }
+
+        .skill h3, .framework h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill img, .framework img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Form */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f4f4f4;
+            margin-top: 2rem;
+        }
+        h2{
+            font-family: serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Portfolio</h1>
+        <p>Welcome to my personal learning portfolio.</p>
+    </header>
+
+    <!-- Introduction Section -->
+    <section>
+        <h2 >About Me</h2>
+        <div class="content about-me">
+            <!-- Left Side Circular Image -->
+            <img src="https://images.shiksha.com/mediadata/images/1571909953phpVubCwi.jpeg" alt="Left Circular Image" class="about-me-left">
+            <!-- Right Side Circular Image -->
+            <img src="https://img.freepik.com/premium-vector/web-design-logo-vector-templet_1070930-291.jpg" alt="Right Circular Image" class="about-me-right">
+            <ul>
+                <li><strong>Name:</strong> Archit Verma</li>
+                <li><strong>Passion:</strong> Learning web development and coding</li>
+                <li><strong>Focus:</strong> Frontend development with frameworks like React.js, Django, and Node.js</li>
+                <li><strong>Goal:</strong> Build dynamic, interactive, and user-friendly web applications</li>
+                <li><strong>Current Learning:</strong> Mastering JavaScript, HTML, CSS, and frontend frameworks</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+        <h2>Learning</h2>
+        <div class="skills">
+            <!-- HTML -->
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML logo">
+                <h3>HTML</h3>
+                <p>Structure of web pages.</p>
+            </div>
+            <!-- CSS -->
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS logo">
+                <h3>CSS</h3>
+                <p>Styling and layout of web pages.</p>
+            </div>
+            <!-- JavaScript -->
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript logo">
+                <h3>JavaScript</h3>
+                <p>Adding interactivity to web pages.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Arin Maddheshiya. All rights reserved.</p>
+    </footer>
+</body>
+</html>
